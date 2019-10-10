@@ -7,6 +7,7 @@ import Logout from "./views/Logout.vue";
 import MoviesIndex from "./views/movies/MoviesIndex.vue";
 import MoviesCreate from "./views/movies/MoviesCreate.vue";
 import MoviesUpdate from "./views/movies/MoviesUpdate.vue";
+import MoviesShow from "./views/movies/MoviesShow.vue";
 
 Vue.use(Router);
 
@@ -38,6 +39,7 @@ export default new Router({
       component: MoviesCreate
     },
     { path: "/MoviesUpdate", name: "movies-update", component: MoviesUpdate },
+    { path: "/MoviesShow", name: "movies-show", component: MoviesShow },
     { path: "/signup", name: "signup", component: Signup },
     { path: "/login", name: "login", component: Login },
     { path: "/logout", name: "logout", component: Logout }

@@ -16,6 +16,8 @@
       <router-link to="/MoviesCreate">Movies Create</router-link>
       |
       <router-link to="/MoviesUpdate">Movies Update</router-link>
+      |
+      <router-link to="/MoviesShow">Movies Show</router-link>
     </div>
     <router-view />
   </div>
