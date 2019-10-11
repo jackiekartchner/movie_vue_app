@@ -1,13 +1,12 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
+import MoviesIndex from "./views/movies/Index.vue";
+import MoviesShow from "./views/movies/Show.vue";
+import MoviesNew from "./views/movies/New.vue";
+import MoviesEdit from "./views/movies/Edit.vue";
 import Signup from "./views/Signup.vue";
 import Login from "./views/Login.vue";
 import Logout from "./views/Logout.vue";
-import MoviesIndex from "./views/movies/MoviesIndex.vue";
-import MoviesCreate from "./views/movies/MoviesCreate.vue";
-import MoviesUpdate from "./views/movies/MoviesUpdate.vue";
-import MoviesShow from "./views/movies/MoviesShow.vue";
 
 Vue.use(Router);
 
@@ -16,30 +15,26 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: "/",
-      name: "home",
-      component: Home
-    },
-    {
-      path: "/about",
-      name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ "./views/About.vue")
-    },
-    {
-      path: "/MoviesIndex",
+      path: "/movies",
       name: "movies-index",
       component: MoviesIndex
     },
+
     {
-      path: "/MoviesCreate",
-      name: "movies-create",
-      component: MoviesCreate
+      path: "/movies/:id/edit",
+      name: "movies-edit",
+      component: MoviesEdit
     },
-    { path: "/MoviesUpdate", name: "movies-update", component: MoviesUpdate },
-    { path: "/MoviesShow", name: "movies-show", component: MoviesShow },
+    {
+      path: "/movies/:id",
+      name: "movies-show",
+      component: MoviesShow
+    },
+    {
+      path: "/movies/new",
+      name: "movies-new",
+      component: MoviesNew
+    },
     { path: "/signup", name: "signup", component: Signup },
     { path: "/login", name: "login", component: Login },
     { path: "/logout", name: "logout", component: Logout }
