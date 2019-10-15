@@ -29,6 +29,11 @@
 
     <div class="container">
       <router-view />
+
+      <footer id="footer" class="midnight-blue">
+        <!-- ... -->
+      </footer>
+      <!--/#footer-->
     </div>
   </div>
 </template>
