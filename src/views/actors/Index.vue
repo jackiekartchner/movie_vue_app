@@ -1,6 +1,6 @@
 <template>
-  <div class="movies-index">
-    <h1>All Movies</h1>
+  <div class="actors-index">
+    <h1>All Actors</h1>
     Search by title: <input v-model="titleFilter" list="titles">
     <datalist id="titles">
       <option v-for="movie in movies">{{ movie.title }}</option>
