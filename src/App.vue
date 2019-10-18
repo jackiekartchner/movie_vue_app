@@ -19,7 +19,12 @@
             Home
             <span class="sr-only">(current)</span>
           </router-link>
-          <router-link class="nav-item nav-link" to="/movies/new">New Post</router-link>
+          |
+          <router-link class="nav-item nav-link" to="/actors">Actor Home</router-link>
+          |
+          <router-link class="nav-item nav-link" to="/movies/new">New Movie</router-link>
+          |
+          <router-link class="nav-item nav-link" to="/actors/new">New Actor</router-link>
           <router-link class="nav-item nav-link" to="/signup">Signup</router-link>
           <router-link class="nav-item nav-link" to="/login">Login</router-link>
           <router-link class="nav-item nav-link" to="/logout">Logout</router-link>
